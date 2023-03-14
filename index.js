@@ -1,3 +1,3 @@
-require('./hulk')
-require('./thor')
+// require('./hulk')
+// require('./thor')
 
