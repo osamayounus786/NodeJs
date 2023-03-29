@@ -1,6 +1,8 @@
 // require('./hulk')
 // require('./thor')
 
+// const { buffer } = require("stream/consumers");
+
 // const superHero = require('./super-hero')
 // console.log(superHero.getName())
 // superHero.setName('Super Man')
@@ -17,7 +19,85 @@
 // console.log(subt(8,3));
 
 
-const data = require('./data.json');
+// const data = require('./data.json');
 
 
-console.log(data);
+// console.log(data);
+// const path = require("node:path");
+
+// console.log(__filename);
+// console.log(__dirname);
+
+// console.log(path.basename(__filename));
+// console.log(path.basename(__dirname));
+
+
+// console.log(path.extname(__filename));
+// console.log(path.extname(__dirname));
+
+// console.log(path.parse(__filename))
+
+// console.log(path.format(path.parse(__filename)))
+
+// console.log(path.isAbsolute(__filename))
+// console.log(path.isAbsolute("./data.json"))
+
+
+// console.log(path.join("folder1","folder2","index.html"));
+// console.log(path.join("/folder1","folder2","index.html"));
+// console.log(path.join("//folder1","folder2","index.html"));
+// console.log(path.join("/folder1","folder2","../index.html"));
+
+
+// console.log(path.resolve("folder1","folder2","index.html"));
+// console.log(path.resolve("/folder1","folder2","index.html"));
+// console.log(path.resolve("//folder1","folder2","index.html"));
+// console.log(path.resolve("/folder1","folder2","../index.html"));
+
+// console.log(path.join(__dirname, "data.json"));
+
+
+//callback function
+
+// function greet(name){
+//     console.log(`Hello ${name}`)
+// }
+
+// function greetOsama(greetfn){
+//         const name = 'Osama Younus'
+//         greetfn(name)
+// }
+
+// greetOsama(greet);
+
+
+// const  EventEmitter = require("node:events");
+
+// const emitter = new EventEmitter();
+// emitter.on("Ordered Pizza!!",()=>{
+//     console.log(`Order recieved Baking Pizza`)
+// })
+
+// emitter.emit("Ordered Pizza!!");
+// console.log(emitter);
+
+
+// const PizzaShop = require('./pizza-shop')
+
+// const pizzaShop = new PizzaShop();
+
+// pizzaShop.orderNumber();
+// pizzaShop.displayOrderNumber();
+
+
+// const buffer = new Buffer.from("Osama");
+
+// buffer.write("saloom")
+
+// console.log(buffer);
+// console.log(buffer.toString());
+// console.log(buffer.toJSON());
+
+const fs = require('node:fs');
+
+console.log(fs);
