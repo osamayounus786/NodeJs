@@ -99,5 +99,27 @@
 // console.log(buffer.toJSON());
 
 const fs = require('node:fs');
+const fileSystem = fs.readFileSync("./file.txt","utf-8");
+console.log(fileSystem);
 
-console.log(fs);
+fs.readFile("./file.txt","utf-8",(error,data) =>{
+        if(error){
+            console.log(error);
+        }
+        else{
+            console.log(data);
+        }
+})
+
+
+fs.writeFileSync("./greet.txt","Assalamualaikum")
+
+
+fs.writeFile("./greet.txt","Hello Osama",{ flag: "a" },(error)=>{
+    if(error){
+        console.log(error)
+    }
+    else{
+        console.log("Walaikumsalam")
+    }
+})
