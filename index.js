@@ -98,28 +98,47 @@
 // console.log(buffer.toString());
 // console.log(buffer.toJSON());
 
-const fs = require('node:fs');
-const fileSystem = fs.readFileSync("./file.txt","utf-8");
-console.log(fileSystem);
+// const fs = require('node:fs');
+// const fileSystem = fs.readFileSync("./file.txt","utf-8");
+// console.log(fileSystem);
 
-fs.readFile("./file.txt","utf-8",(error,data) =>{
-        if(error){
-            console.log(error);
-        }
-        else{
-            console.log(data);
-        }
+// fs.readFile("./file.txt","utf-8",(error,data) =>{
+//         if(error){
+//             console.log(error);
+//         }
+//         else{
+//             console.log(data);
+//         }
+// })
+
+
+// fs.writeFileSync("./greet.txt","Assalamualaikum")
+
+
+// fs.writeFile("./greet.txt","Hello Osama",{ flag: "a" },(error)=>{
+//     if(error){
+//         console.log(error)
+//     }
+//     else{
+//         console.log("Walaikumsalam")
+//     }
+// })
+
+
+
+
+//http module 
+
+//creating node server 
+
+const http = require("node:http");
+
+const server =  http.createServer((req,res)=>{
+            res.writeHead(200, {"content-type": "text/plain" });
+            res.end("Shambe");
 })
 
-
-fs.writeFileSync("./greet.txt","Assalamualaikum")
-
-
-fs.writeFile("./greet.txt","Hello Osama",{ flag: "a" },(error)=>{
-    if(error){
-        console.log(error)
-    }
-    else{
-        console.log("Walaikumsalam")
-    }
-})
+        server.listen(3000, ()=>{
+            console.log("Server running on port 3000")
+        })
+// console.log(http)
