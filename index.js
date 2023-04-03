@@ -134,8 +134,13 @@
 const http = require("node:http");
 
 const server =  http.createServer((req,res)=>{
-            res.writeHead(200, {"content-type": "text/plain" });
-            res.end("Shambe");
+
+            const superHero = {
+                firstName: "Bruce",
+                lastName: "Wayne"
+            };
+            res.writeHead(200, {"content-type": "application/json" });
+            res.end(JSON.stringify(superHero));
 })
 
         server.listen(3000, ()=>{
