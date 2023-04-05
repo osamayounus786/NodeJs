@@ -153,17 +153,68 @@
 
 // HTML Responese
 
+
+// importing fs module to call index.html
+// and read the file using readFileSync
+
+// const http = require("node:http");
+// const fs = require("node:fs");
+
+// const server =  http.createServer((req,res)=>{
+
+//     res.writeHead(200, {"Content-Type": "text/html" });
+
+//     const html = fs.readFileSync("./index.html","utf-8");
+            
+            
+//             res.end(html);
+// })
+
+//         server.listen(3000, ()=>{
+//             console.log("Server running on port 3000")
+//         })
+
+
+
+
+        // importing fs module to call index.html
+                   // read file sync read the entire contents at once 
+             // if you have large html file and storing all content in a temporary buffer 
+             // which may lead to unneccessary meomry instead we rely on streams
+
+// const http = require("node:http");
+// const fs = require("node:fs");
+
+// const server =  http.createServer((req,res)=>{
+
+//     res.writeHead(200, {"Content-Type": "text/html" });
+
+
+//     fs.createReadStream("./index.html").pipe(res);
+            
+            
+//             // res.end(html);
+// })
+
+//         server.listen(3000, ()=>{
+//             console.log("Server running on port 3000")
+//         })
+
+
+
+// HTML Template
+
 const http = require("node:http");
+const fs = require("node:fs");
 
 const server =  http.createServer((req,res)=>{
 
-            
-            const superHero = {
-                firstName: "Bruce",
-                lastName: "Wayne"
-            };
-            res.writeHead(200, {"Content-Type": "text/html" });
-            res.end("<h1>Hello World</h1>");
+    const name = "Sameer";
+    res.writeHead(200, {"Content-Type": "text/html" });
+
+    let html = fs.readFileSync("./index.html","utf-8");
+    html = html.replace("{{name}}",name)
+    res.end(html);
 })
 
         server.listen(3000, ()=>{
