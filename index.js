@@ -223,34 +223,53 @@
 
 
         // http routing
-const http = require("node:http");
-const fs = require("node:fs");
+// const http = require("node:http");
+// const fs = require("node:fs");
 
-const server =  http.createServer((req,res)=>{
+// const server =  http.createServer((req,res)=>{
 
    
-   if(req.url === "/"){
-        res.writeHead(200,{"Content-Type": "text/plain"})
-        res.end("Home Page")
-   }
-   else if(req.url === "/about"){
-    res.writeHead(200,{"Content-Type": "text/plain"})
-    res.end("About Page")
-   }
-   else if(req.url === "/api"){
-    res.writeHead(200,{"Content-Type": "application/JSON"})
-    res.end(JSON.stringify({
-        firstName: "Osama",
-        lastName: "Younus"
-    }))
-   }
+//    if(req.url === "/"){
+//         res.writeHead(200,{"Content-Type": "text/plain"})
+//         res.end("Home Page")
+//    }
+//    else if(req.url === "/about"){
+//     res.writeHead(200,{"Content-Type": "text/plain"})
+//     res.end("About Page")
+//    }
+//    else if(req.url === "/api"){
+//     res.writeHead(200,{"Content-Type": "application/JSON"})
+//     res.end(JSON.stringify({
+//         firstName: "Osama",
+//         lastName: "Younus"
+//     }))
+//    }
 
-   else{
-    res.writeHead(404,{"Content-Type": "text/plain"})
-    res.end("404 Page")
-   }
-})
+//    else{
+//     res.writeHead(404,{"Content-Type": "text/plain"})
+//     res.end("404 Page")
+//    }
+// })
 
-        server.listen(3000, ()=>{
-            console.log("Server running on port 3000")
-        })
+//         server.listen(3000, ()=>{
+//             console.log("Server running on port 3000")
+//         })
+
+
+
+
+        //Thread Pool
+
+
+        // for example 
+        // const fs = require("node:fs");
+        
+        //     console.log("first")
+            
+        //     fs.readFile("file.txt","utf-8",(err,data)=>{
+        //         console.log("file content")
+        //     })
+        //     console.log("last")
+
+
+        
